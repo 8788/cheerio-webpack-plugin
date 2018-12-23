@@ -1,0 +1,24 @@
+{
+  "name": "cheerio-webpack-plugin",
+  "version": "0.1.0",
+  "description": "cheerio-webpack-plugin",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/8788/cheerio-webpack-plugin.git"
+  },
+  "keywords": [
+    "cheerio",
+    "webpack",
+    "cheerio-webpack-plugin"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/8788/cheerio-webpack-plugin/issues"
+  },
+  "homepage": "https://github.com/8788/cheerio-webpack-plugin#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2"
+  }
+}
