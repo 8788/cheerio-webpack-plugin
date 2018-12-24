@@ -1,6 +1,6 @@
 {
   "name": "cheerio-webpack-plugin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "cheerio-webpack-plugin",
   "main": "index.js",
   "repository": {
@@ -9,6 +9,7 @@
   },
   "keywords": [
     "cheerio",
+    "jquery",
     "webpack",
     "cheerio-webpack-plugin"
   ],
