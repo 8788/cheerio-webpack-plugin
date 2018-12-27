@@ -30,7 +30,7 @@ module.exports = {
     new CheerioWebpackPlugin({
       test: /.html$/,
       callback: function ($) {
-        $('link').remove()
+        $('.debug').remove()
       }
     })
   ]
