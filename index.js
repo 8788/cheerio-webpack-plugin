@@ -22,7 +22,7 @@ class CheerioWebpackPlugin {
       for (const filename in compilation.assets) {
         if (matchFile(filename, this.options.test)) {
           const $ = cheerio.load(compilation.assets[filename].source())
-          this.options.callback && this.options.callback($)
+          this.options.callback && this.options.callback($, filename)
 
           compilation.assets[filename] = {
             source: () => $.html(),

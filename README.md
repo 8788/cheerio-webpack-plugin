@@ -29,7 +29,7 @@ module.exports = {
     }),
     new CheerioWebpackPlugin({
       test: /.html$/,
-      callback: function ($) {
+      callback: function ($, filename) { // filename provided as 2nd argument
         $('.debug').remove()
       }
     })
