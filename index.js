@@ -21,12 +21,13 @@ class CheerioWebpackPlugin {
     compiler.hooks.emit.tapAsync('CheerioWebpackPlugin', (compilation, callback) => {
       for (const filename in compilation.assets) {
         if (matchFile(filename, this.options.test)) {
-          const $ = cheerio.load(compilation.assets[filename].source())
-          this.options.callback && this.options.callback($)
+          const $ = cheerio.load(compilation.assets[filename].source(), this.options.parserOptions)
+          this.options.callback && this.options.callback($, filename)
+          const isXml = !!(this.options.parserOptions || {}).xmlMode;
 
           compilation.assets[filename] = {
-            source: () => $.html(),
-            size: () => $.html().size
+            source: () => isXml ? $.xml() : $.html(),
+            size: () => (isXml ? $.xml() : $.html()).size
           }
         }
       }
